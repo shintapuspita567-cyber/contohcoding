@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kampung Inggris Pare | Kursus Bahasa Inggris</title>
+    <meta
+      name="description"
+      content="Kursus Bahasa Inggris di Kampung Inggris Pare dengan metode intensif, tutor berpengalaman, dan program siap bantu bahasa Inggris Anda naik level."
+    />
+    <style>
+      :root {
+        --primary: #1f6feb;
+        --primary-dark: #1249a3;
+        --secondary: #f4b942;
+        --bg: #f6f9ff;
+        --card: #ffffff;
+        --text: #1d2a39;
+        --muted: #5f6f81;
+        --line: #dfe9f5;
+        --success: #1ea97c;
+        --shadow: 0 18px 40px rgba(31, 111, 235, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
+        color: var(--text);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(31, 111, 235, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 78px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 1.1rem;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--primary), #74a6ff);
+        color: white;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .nav-cta {
+        padding: 12px 20px;
+        background: var(--primary);
+        color: #fff;
+        border-radius: 30px;
+        font-weight: 700;
+        box-shadow: var(--shadow);
+      }
+
+      .hero {
+        padding: 64px 0 30px;
+      }
+
+      .hero-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 42px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #eaf2ff;
+        color: var(--primary-dark);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.3rem, 5vw, 4.3rem);
+        line-height: 1.1;
+        margin: 18px 0 14px;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--muted);
+        max-width: 600px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .btn {
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        border-radius: 14px;
+        padding: 15px 24px;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+      }
+
+      .btn-secondary {
+        background: #eef5ff;
+        color: var(--primary-dark);
+      }
+
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 26px;
+        margin-top: 28px;
+      }
+
+      .stat {
+        min-width: 140px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.7rem;
+        color: var(--text);
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+
+      .visual-card {
+        background: linear-gradient(135deg, #ffffff 0%, #edf4ff 100%);
+        border: 1px solid rgba(31, 111, 235, 0.08);
+        border-radius: 26px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .mini-box {
+        background: linear-gradient(135deg, var(--primary), #79a7ff);
+        color: white;
+        border-radius: 22px;
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+
+      .mini-box h3 {
+        margin: 0 0 8px;
+        font-size: 1.4rem;
+      }
+
+      .mini-box p {
+        margin: 0;
+        opacity: 0.9;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .info-item {
+        background: #fff;
+        border-radius: 18px;
+        padding: 16px;
+        border: 1px solid var(--line);
+      }
+
+      .info-item small {
+        display: block;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .info-item strong {
+        font-size: 1.2rem;
+      }
+
+      .badge-float {
+        position: absolute;
+        right: -12px;
+        bottom: 18px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .badge-dot {
+        width: 12px;
+        height: 12px;
+        background: var(--success);
+        border-radius: 50%;
+      }
+
+      .section {
+        padding: 90px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 42px;
+      }
+
+      .section-header h2 {
+        font-size: clamp(2rem, 3vw, 2.7rem);
+        margin: 0 0 12px;
+      }
+
+      .section-header p {
+        margin: 0 auto;
+        color: var(--muted);
+        max-width: 660px;
+        line-height: 1.7;
+      }
+
+      .program-grid,
+      .feature-grid,
+      .testimonial-grid,
+      .price-grid {
+        display: grid;
+        gap: 24px;
+      }
+
+      .program-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 28px 22px;
+        box-shadow: 0 10px 20px rgba(10, 27, 50, 0.04);
+      }
+
+      .program-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .program-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary), #74a6ff);
+      }
+
+      .tag {
+        display: inline-block;
+        background: #eaf2ff;
+        color: var(--primary-dark);
+        border-radius: 999px;
+        font-size: 0.72rem;
+        padding: 8px 10px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .program-card h3 {
+        margin: 0 0 12px;
+        font-size: 1.4rem;
+      }
+
+      .program-card p,
+      .feature-card p,
+      .price-card p,
+      .testimonial-card p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .program-card ul,
+      .price-card ul {
+        margin: 18px 0 0 0;
+        padding-left: 18px;
+        color: var(--text);
+        line-height: 2;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .feature-card {
+        text-align: center;
+        padding: 32px 18px;
+      }
+
+      .feature-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 18px;
+        display: grid;
+        place-items: center;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #eaf2ff, #dfeeff);
+        font-size: 2rem;
+      }
+
+      .feature-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.18rem;
+      }
+
+      .price-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .price-card {
+        text-align: left;
+      }
+
+      .price-card.popular {
+        border: 2px solid var(--primary);
+        position: relative;
+        transform: translateY(-8px);
+      }
+
+      .popular-badge {
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        background: var(--secondary);
+        color: #352400;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 800;
+        padding: 8px 12px;
+      }
+
+      .price-top {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+
+      .price-top h3 {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+
+      .price {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--primary-dark);
+      }
+
+      .price small {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .price-card .btn {
+        width: 100%;
+        margin-top: 18px;
+        text-align: center;
+      }
+
+      .testimonial-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .testimonial-card {
+        padding: 26px 22px;
+      }
+
+      .stars {
+        font-size: 1.08rem;
+        letter-spacing: 2px;
+        color: #ffb400;
+        margin-bottom: 10px;
+      }
+
+      .profile {
+        margin-top: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #adcaff, #edf3ff);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        color: var(--primary-dark);
+      }
+
+      .profile strong {
+        display: block;
+      }
+
+      .profile span {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .cta-wrap {
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        border-radius: 30px;
+        padding: 42px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        color: white;
+      }
+
+      .cta-wrap h2 {
+        margin: 0 0 8px;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+      }
+
+      .cta-wrap p {
+        margin: 0;
+        opacity: 0.9;
+      }
+
+      footer {
+        padding: 28px 0 40px;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .hero-wrap,
+        .program-grid,
+        .feature-grid,
+        .price-grid,
+        .testimonial-grid,
+        .cta-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-wrap {
+          display: block;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          gap: 14px;
+          padding: 12px 0;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 14px 20px;
+        }
+
+        .cta-wrap {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero {
+          padding-top: 42px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#home" class="brand" aria-label="logo kampung inggris pare">
+          <span class="brand-mark">KI</span>
+          <span>Kampung Inggris Pare</span>
+        </a>
+
+        <nav class="nav-links" aria-label="navigasi utama">
+          <a href="#program">Program</a>
+          <a href="#keunggulan">Keunggulan</a>
+          <a href="#harga">Harga</a>
+          <a href="#testimoni">Testimoni</a>
+        </nav>
+
+        <a href="#daftar" class="nav-cta">Daftar Sekarang</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-wrap">
+          <div>
+            <div class="eyebrow">✅ Kursus Bahasa Inggris Terfavorit</div>
+            <h1>
+              Tingkatkan Bahasa Inggrismu di <span>Pare</span>
+            </h1>
+            <p>
+              Kampung Inggris Pare adalah tempat terbaik untuk belajar speaking,
+              grammar, dan persiapan TOEFL/IELTS dengan suasana belajar yang
+              kondusif, mentor berpengalaman, dan program intensif yang terbukti
+              efektif.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#daftar" class="btn btn-primary">Ambil Program</a>
+              <a href="#program" class="btn btn-secondary">Lihat Program</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <strong>15K+</strong>
+                <span>Alumni</span>
+              </div>
+              <div class="stat">
+                <strong>96%</strong>
+                <span>Hasil Memuaskan</span>
+              </div>
+              <div class="stat">
+                <strong>4.9/5</strong>
+                <span>Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="visual kursus">
+            <div class="visual-card">
+              <div class="mini-box">
+                <h3>English Intensive</h3>
+                <p>Belajar speaking, listening, vocabulary, dan grammar</p>
+              </div>
+
+              <div class="info-grid">
+                <div class="info-item">
+                  <small>Program</small>
+                  <strong>Private</strong>
+                </div>
+                <div class="info-item">
+                  <small>Durasi</small>
+                  <strong>2-3 Bulan</strong>
+                </div>
+                <div class="info-item">
+                  <small>Pengajar</small>
+                  <strong>Native / Local</strong>
+                </div>
+                <div class="info-item">
+                  <small>Metode</small>
+                  <strong>Praktis</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="badge-float">
+              <span class="badge-dot"></span>
+              <div>
+                <strong>Rangking 1</strong><br />
+                <small>Kursus favorit di Pare</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="program">
+        <div class="container">
+          <div class="section-header">
+            <h2>Pilih Program yang Sesuai Targetmu</h2>
+            <p>
+              Mulai dari pemula sampai persiapan ujian, kami punya program yang
+              sesuai dengan kebutuhan belajar Anda.
+            </p>
+          </div>
+
+          <div class="program-grid">
+            <article class="card program-card">
+              <div class="tag">Beginner</div>
+              <h3>Basic English</h3>
+              <p>
+                Cocok untuk pemula yang ingin membangun fondasi bahasa Inggris
+                dengan cara yang santai tapi efektif.
+              </p>
+              <ul>
+                <li>Speaking dasar</li>
+                <li>Grammar dan vocabulary</li>
+                <li>Listening sederhana</li>
+              </ul>
+            </article>
+
+            <article class="card program-card">
+              <div class="tag">Favorite</div>
+              <h3>Conversation Class</h3>
+              <p>
+                Fokus pada kemampuan berbicara aktif, percakapan sehari-hari, dan
+                rasa percaya diri saat berkomunikasi.
+              </p>
+              <ul>
+                <li>Daily conversation</li>
+                <li>Public speaking</li>
+                <li>Practice intensif</li>
+              </ul>
+            </article>
+
+            <article class="card program-card">
+              <div class="tag">Premium</div>
+              <h3>TOEFL / IELTS Prep</h3>
+              <p>
+                Program intensif untuk target skor tinggi, dilengkapi strategi dan
+                pembahasan soal yang terstruktur.
+              </p>
+              <ul>
+                <li>Listening & reading</li>
+                <li>Writing & speaking</li>
+                <li>Try out berkala</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="keunggulan">
+        <div class="container">
+          <div class="section-header">
+            <h2>Kenapa Harus Pilih Kami?</h2>
+            <p>
+              Kami membangun lingkungan belajar yang mendukung dan sistem yang
+              membuat kamu cepat berkembang.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="card feature-card">
+              <div class="feature-icon">🧑‍🏫</div>
+              <h3>Tutor Berpengalaman</h3>
+              <p>Instruktur yang komunikatif, sabar, dan siap membimbing Anda.</p>
+            </div>
+
+            <div class="card feature-card">
+              <div class="feature-icon">💬</div>
+              <h3>Practice Speaking</h3>
+              <p>Lebih banyak latihan langsung agar bahasa Inggris terasa nyata.</p>
+            </div>
+
+            <div class="card feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Materi Terstruktur</h3>
+              <p>Materi disusun bertahap sesuai kebutuhan dan target belajar.</p>
+            </div>
+
+            <div class="card feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Mentoring Fokus</h3>
+              <p>Target belajar jelas, evaluasi rutin, dan progress yang terukur.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="harga">
+        <div class="container">
+          <div class="section-header">
+            <h2>Paket Kursus yang Terjangkau</h2>
+            <p>
+              Pilih paket yang paling sesuai dengan kebutuhan belajar Anda dan mulai
+              hari ini juga.
+            </p>
+          </div>
+
+          <div class="price-grid">
+            <article class="card price-card">
+              <div class="price-top">
+                <h3>Reguler</h3>
+              </div>
+              <div class="price">Rp 500K <small>/bulan</small></div>
+              <p>Untuk pemula yang ingin belajar dasar dan rutin.</p>
+              <ul>
+                <li>2x pertemuan per minggu</li>
+                <li>Materi dasar</li>
+                <li>Group class</li>
+              </ul>
+              <a href="#daftar" class="btn btn-secondary">Pilih Paket</a>
+            </article>
+
+            <article class="card price-card popular">
+              <div class="popular-badge">Paling Laris</div>
+              <div class="price-top">
+                <h3>Intensif</h3>
+              </div>
+              <div class="price">Rp 1,2Jt <small>/bulan</small></div>
+              <p>Program cepat untuk hasil yang lebih maksimal dalam jangka pendek.</p>
+              <ul>
+                <li>3x pertemuan per minggu</li>
+                <li>Speaking intensive</li>
+                <li>Evaluasi mingguan</li>
+              </ul>
+              <a href="#daftar" class="btn btn-primary">Pilih Paket</a>
+            </article>
+
+            <article class="card price-card">
+              <div class="price-top">
+                <h3>Private</h3>
+              </div>
+              <div class="price">Rp 2,5Jt <small>/bulan</small></div>
+              <p>Untuk Anda yang ingin fokus personal dan target belajar lebih cepat.</p>
+              <ul>
+                <li>1 on 1 mentoring</li>
+                <li>Program custom</li>
+                <li>Prioritas jadwal</li>
+              </ul>
+              <a href="#daftar" class="btn btn-secondary">Pilih Paket</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimoni">
+        <div class="container">
+          <div class="section-header">
+            <h2>Apa Kata Alumni?</h2>
+            <p>
+              Banyak alumni yang sudah merasakan manfaat dan perubahan signifikan
+              setelah belajar di Kampung Inggris Pare.
+            </p>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="card testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Awalnya saya malu berbicara Inggris, tetapi setelah 2 bulan saya
+                sudah lebih percaya diri. Metodenya sangat efektif dan menyenangkan.”
+              </p>
+              <div class="profile">
+                <div class="avatar">A</div>
+                <div>
+                  <strong>Ayu</strong>
+                  <span>Mahasiswa</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Lingkungannya kondusif dan pengajarnya super suportif. Saya jadi
+                cepat berkembang terutama di speaking dan listening.”
+              </p>
+              <div class="profile">
+                <div class="avatar">R</div>
+                <div>
+                  <strong>Rizky</strong>
+                  <span>Fresh Graduate</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Saya ikut program TOEFL dan hasilnya sangat membantu. Rekomendasi
+                banget untuk yang ingin persiapan ujian.”
+              </p>
+              <div class="profile">
+                <div class="avatar">N</div>
+                <div>
+                  <strong>Nadia</strong>
+                  <span>Peserta TOEFL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="daftar">
+        <div class="container">
+          <div class="cta-wrap">
+            <div>
+              <h2>Siap mulai perjalanan bahasa Inggrismu?</h2>
+              <p>Daftar sekarang dan dapatkan konsultasi gratis untuk program terbaikmu.</p>
+            </div>
+            <a href="mailto:info@kampunginggrispare.com" class="btn btn-secondary">Daftar Gratis</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © 2026 Kampung Inggris Pare. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>
